@@ -1,48 +1,46 @@
+/* Import elegant fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-color: #121212; /* Dark mode background */
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
 }
 
-header nav ul {
-    list-style-type: none;
-    padding: 0;
+/* Bold color for accents */
+:root {
+    --accent-color: #ff0078; /* Vibrant pink for pop-out */
 }
 
-header nav ul li {
-    display: inline;
-    margin-right: 10px;
+a, .button {
+    color: var(--accent-color);
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-a {
-    color: #58a6ff; /* This is your pop-out color for links */
+a:hover, .button:hover {
+    color: #ffffff;
+    background-color: var(--accent-color);
     text-decoration: none;
 }
 
-section {
-    padding: 20px;
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.project {
-    background-color: #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+/* Responsive design for smaller devices */
+@media (max-width: 768px) {
+    /* Adjust styles for mobile here */
 }
